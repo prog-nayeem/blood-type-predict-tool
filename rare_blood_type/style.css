@@ -1,0 +1,151 @@
+body {
+  font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.panel-wrapper {
+  display: flex;
+  width: 905px;
+  margin: auto auto;
+}
+
+.panel-wrapper .panel-main {
+  width: 100%;
+  box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.12);
+  border: solid 0.1rem #d0d1d2;
+  background-color: #fff;
+  font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  min-height: 14.1rem;
+  margin: 1rem 0;
+  height: auto !important;
+  padding: 0 1rem;
+}
+
+.panel-heading {
+  padding: 0px;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 16px;
+  color: rgb(102, 102, 102);
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+.button-group {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.button-group button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  z-index: 1;
+  width: 186px;
+  height: 43px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fffdfd;
+  color: #808080;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 25px;
+}
+
+.button-group > .selected {
+  background-color: #e20000;
+  color: white;
+}
+
+.image-group {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image-wrapper {
+  width: 170px;
+  height: 215px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.image-wrapper img {
+  height: 190px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: rgb(255, 203, 203);
+}
+
+.image-wrapper h2 {
+  color: #666666;
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrapper div {
+  position: absolute;
+  top: 41%;
+  left: 21%;
+  z-index: 22;
+  width: 100px;
+}
+
+.image-wrapper div h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.background-color {
+  background-color: #e20000;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.wave-container {
+  width: 100%;
+  overflow: hidden;
+  animation: containerAnimation 10s linear infinite;
+}
+
+.wave-path {
+  animation: waveAnimation 10s linear infinite;
+}
+
+@keyframes containerAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px); /* Adjust the amplitude as needed */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes waveAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px); /* Adjust the amplitude as needed */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
