@@ -53,6 +53,14 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   };
 
+  function setDefaultSelections() {
+    var defaultButton = buttons[0];
+
+    if (defaultButton) {
+      defaultButton.click();
+    }
+  }
+
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       const bloodType = button.textContent;
@@ -75,6 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  setDefaultSelections();
 
   function updateValue(elementId, newValue) {
     var currentPercentage = parseInt(

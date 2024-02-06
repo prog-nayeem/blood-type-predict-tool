@@ -15,79 +15,179 @@
         </h2>
         <div class="panel-body">
           <div class="button-group">
-            <button>Group A</button>
-            <button>Group B</button>
-            <button>Group AB</button>
-            <button>Group O</button>
+            <button id="groupA" class="selected">Group A</button>
+            <button id="groupB">Group B</button>
+            <button id="groupAB">Group AB</button>
+            <button id="groupO">Group O</button>
           </div>
-          <div class="image">
-            <img src="bloodVialHighlight.svg" alt="Blood Vial Highlight" />
-            <!-- <img
-              class="bg-image"
-              src="bloodVialBackground.svg"
-              alt="Blood Vial Background"
-            /> -->
-            <div class="bg-image">
-              <div class="inside-image-main">
-                <div class="plasma-wrapper"></div>
-              </div>
-            </div>
-            <!-- <div class="plasma-wrapper">
-              <div class="plasma-main">
-                <div class="plasma-effect"></div>
-              </div>
-            </div> -->
+          <div class="image-wrapper">
+            <div class="image">
+              <img src="bloodVialHighlight.svg" alt="Blood Vial Highlight" />
 
-            <div class="blood-vial-upper-content">
-              <div>B</div>
-              <h2>PLASMA</h2>
-            </div>
-            <div class="blood-vial-bottom-content">
-              <div>A</div>
-              <h2>RED CELLS</h2>
+              <div class="bg-image">
+                <div class="inside-image-main">
+                  <div class="plasma-wrapper">
+                    <svg
+                      id="svg-o"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 211 211"
+                      width="300"
+                      height="300"
+                    >
+                      <g style="height: 250px" transform="translate(-312 1822)">
+                        <g id="water" style="height: 250px">
+                          <path
+                            width="400"
+                            height="400"
+                            id="waveShape"
+                            d="M500,118.244v223.11H4V106.464c43.35,1.17,46.02,11.89,94.4,11.89,51.2,0,51.2-12,102.39-12s51.2,12,102.4,12,51.2-12,102.41-12C453.98,106.354,456.65,117.074,500,118.244Z"
+                            transform="translate(308 -1830.354)"
+                            fill="#feda25"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="red-cells-wrapper">
+                    <svg
+                      id="svg-o"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 211 211"
+                      width="300"
+                      height="300"
+                    >
+                      <g style="height: 250px" transform="translate(-312 1822)">
+                        <g id="water" style="height: 250px">
+                          <path
+                            width="400"
+                            height="400"
+                            id="waveShape"
+                            d="M500,118.244v223.11H4V106.464c43.35,1.17,46.02,11.89,94.4,11.89,51.2,0,51.2-12,102.39-12s51.2,12,102.4,12,51.2-12,102.41-12C453.98,106.354,456.65,117.074,500,118.244Z"
+                            transform="translate(308 -1830.354)"
+                            fill="#ff0000"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="blood-bubbles">
+                    <svg class="bloodBubbles" height="110" width="80">
+                      <circle
+                        class="bloodBubble"
+                        cx="4"
+                        cy="5.074412910706214"
+                        r="4"
+                        starty="4"
+                        wavepos="0"
+                        fill="#bf0000"
+                        wavePos="56"
+                      ></circle>
+                      <circle
+                        class="bloodBubble"
+                        cx="40"
+                        cy="31.23267191580104"
+                        r="4"
+                        starty="25"
+                        wavepos="0"
+                        fill="#bf0000"
+                        wavePos="25"
+                      ></circle>
+                      <circle
+                        class="bloodBubble"
+                        cx="46"
+                        cy="72.38225812614536"
+                        r="4"
+                        starty="69"
+                        wavepos="0"
+                        fill="#bf0000"
+                        wavePos="40"
+                      ></circle>
+                      <circle
+                        class="bloodBubble"
+                        cx="70"
+                        cy="55.402589560734846"
+                        r="4"
+                        starty="45"
+                        wavepos="0"
+                        fill="#bf0000"
+                        wavePos="3"
+                      ></circle>
+                      <circle
+                        class="bloodBubble"
+                        cx="15"
+                        cy="48.23528738298994"
+                        r="4"
+                        starty="38"
+                        wavepos="0"
+                        fill="#bf0000"
+                        wavePos="4"
+                      ></circle>
+                      <circle
+                        class="bloodBubble"
+                        cx="65"
+                        cy="208"
+                        r="4"
+                        starty="8"
+                        wavepos="0"
+                        fill="#bf0000"
+                        wavePos="1"
+                      ></circle>
+                      <circle
+                        class="bloodBubble"
+                        cx="22"
+                        cy="84.83234773179827"
+                        r="4"
+                        starty="78"
+                        wavepos="0"
+                        fill="#bf0000"
+                        wavePos="22"
+                      ></circle>
+                    </svg>
+                  </div>
+                  <div class="ballB">B</div>
+                  <div class="ballA">A</div>
+                </div>
+              </div>
+
+              <div class="blood-vial-upper-content">
+                <h2>PLASMA</h2>
+              </div>
+              <div class="blood-vial-bottom-content">
+                <h2>RED CELLS</h2>
+              </div>
             </div>
           </div>
           <div class="content">
-            <h1>Group A</h1>
-            <p>
-              has only the A antigen on red cells (and B antibody in the plasma)
-            </p>
-            <!-- <svg width="300" height="150" xmlns="http://www.w3.org/2000/svg">
-              <style>
-                .wave {
-                  animation: wave 5s infinite linear;
-                }
-
-                @keyframes wave {
-                  0% {
-                    transform: translateY(0);
-                  }
-                  50% {
-                    transform: translateY(-10px);
-                  }
-                  100% {
-                    transform: translateY(0);
-                  }
-                }
-              </style>
-
-            
-              <polygon
-                class="wave"
-                points="0,100 50,75 100,100 150,75 200,100 250,75 300,100 300,150 0,150"
-                fill="#66c2ff"
-              />
-
-           
-              <polygon
-                class="wave"
-                points="0,125 50,100 100,125 150,100 200,125 250,100 300,125 300,150 0,150"
-                fill="#66c2ff"
-              />
-            </svg> -->
-            <!-- <div class="water">
-              <div class="wave"></div>
-            </div> -->
+            <div id="groupA" class="fade-in">
+              <h1>Group A</h1>
+              <p>
+                has only the A antigen on red cells (and B antibody in the
+                plasma)
+              </p>
+            </div>
+            <div id="groupB">
+              <h1>Group B</h1>
+              <p>
+                has only the B antigen on red cells (and A antibody in the
+                plasma)
+              </p>
+            </div>
+            <div id="groupAB">
+              <h1>Group AB</h1>
+              <p>
+                has both A and B antigens on red cells (but neither A nor B
+                antibody in the plasma)
+              </p>
+            </div>
+            <div id="groupO">
+              <h1>Group O</h1>
+              <p>
+                has neither A nor B antigens on red cells (but both A and B
+                antibody are in the plasma)
+              </p>
+            </div>
           </div>
         </div>
       </div>
