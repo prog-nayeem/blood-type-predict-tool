@@ -474,7 +474,7 @@ body {
 .secTwoCathater1AnimationOut {
   stroke-dasharray: 1000;
   stroke-dashoffset: 0;
-  animation: secTwoDash2 0.25s ease-in;
+  animation: secTwoDash2 0.5s ease-in;
 }
 
 .secTwoCathater1AnimationIn {
@@ -665,3 +665,325 @@ body {
 }
 
 /* BLOOD TYPE AND TRANSFUSION STYLE END */
+
+/* RARE BLOOD TYPE STYLE START */
+
+.sec-three-panel-wrapper {
+  display: flex;
+  width: 905px;
+  margin: auto auto;
+}
+
+.sec-three-panel-wrapper .sec-three-panel-main {
+  width: 100%;
+  box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.12);
+  border: solid 0.1rem #d0d1d2;
+  background-color: #fff;
+  font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  min-height: 14.1rem;
+  margin: 1rem 0;
+  height: auto !important;
+  padding: 0 1rem;
+}
+
+.sec-three-panel-heading {
+  padding: 0px;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 16px;
+  color: rgb(102, 102, 102);
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+.sec-three-panel-body {
+  margin-top: 80px;
+}
+
+.sec-three-button-group {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.sec-three-button-group button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  z-index: 1;
+  width: 186px;
+  height: 43px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fffdfd;
+  color: #808080;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 25px;
+}
+
+.sec-three-button-group > .sec-three-selected {
+  background-color: #e20000;
+  color: white;
+}
+
+.sec-three-image-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 60px;
+  margin-top: 65px;
+}
+
+.sec-three-image-wrapper {
+  width: 170px;
+  height: 215px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.sec-three-image-wrapper img {
+  height: 190px;
+  width: 150px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 22;
+}
+
+.sec-three-bg-color {
+  position: absolute;
+  height: 190px;
+  width: 150px;
+  z-index: 5;
+  background-color: rgb(255, 203, 203);
+}
+
+.sec-three-bg-water-wave {
+  position: absolute;
+  height: 190px;
+  width: 150px;
+  z-index: 6;
+  overflow: hidden;
+}
+
+.sec-three-image-wrapper h2 {
+  color: #666666;
+  font-size: 19px;
+  font-weight: 600;
+  margin-top: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec-three-image-wrapper .sec-three-content {
+  position: absolute;
+  top: 30%;
+  left: 21%;
+  z-index: 22;
+  width: 100px;
+}
+
+.sec-three-image-wrapper .sec-three-content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+}
+#sec-three-water-transform {
+  transition: transform 2s ease;
+}
+#sec-three-water #secThreeWaveShape {
+  animation-name: secThreeWaveAction;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 10s;
+}
+
+@keyframes secThreeWaveAction {
+  0% {
+    transform: translate(300px, -1850px);
+  }
+  50% {
+    transform: translate(102px, -1857px);
+  }
+  100% {
+    transform: translate(300px, -1850px);
+  }
+}
+
+/* RARE BLOOD TYPE STYLE END */
+
+/* MY BLOOD TYPE DETERMINED STYLE START */
+
+.sec-four-main-container {
+  background-color: #f4f4f4;
+  overflow: hidden;
+  width: 905px;
+
+  margin: 20px auto;
+  box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.12);
+  border: solid 0.1rem #d0d1d2;
+}
+.sec-four-heading-text {
+  color: #666666;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  line-height: 0;
+}
+.sec-four-button-group {
+  display: flex;
+  align-items: center;
+  margin-top: 55px;
+}
+
+.sec-four-button-group > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 50px;
+}
+.sec-four-button {
+  width: 53px;
+  height: 29px;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #808080;
+  border: none;
+  border-radius: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 10px;
+
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sec-four-button.sec-four-selected {
+  background-color: #e20000;
+  color: white;
+}
+
+.sec-four-selected {
+  background-color: #e20000;
+  color: white;
+}
+
+.sec-four-body-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.parent-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  overflow: hidden;
+}
+
+.parent-card-container > h2,
+.child-card-container > h2 {
+  font-size: 19px;
+  color: #666666;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.parent-image {
+  width: 99px;
+  height: 259px;
+  background-image: url(/parent.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.parent-image > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  text-align: center;
+  color: #000;
+  font-size: 9rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.plus-icon,
+.equal-icon {
+  font-size: 3rem;
+  font-weight: bold;
+  padding-top: 38px;
+}
+
+.equal-icon {
+  padding-top: 22px;
+}
+
+.child-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 316.27px;
+}
+
+.child-image-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  margin-top: 20px;
+  width: 200px;
+}
+
+.child-image {
+  width: 90px;
+  height: 171px;
+  background-image: url(child.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.child-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  text-align: center;
+  color: #000;
+  font-size: 3rem;
+  font-weight: bold;
+  white-space: pre-line;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.child-content p {
+  margin: 0;
+  margin-right: 15px;
+}
+
+/* MY BLOOD TYPE DETERMINED STYLE END */

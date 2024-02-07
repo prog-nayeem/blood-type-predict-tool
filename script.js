@@ -75,7 +75,9 @@ document.addEventListener("DOMContentLoaded", function () {
   var transfusionContents = document.querySelectorAll(
     ".sec-two-transfusion-content"
   );
-  var oToOpipe = document.querySelector(".sec-two-o-to-o-pipe");
+  var oToOgreyPipe = document
+    .querySelector(".sec-two-o-to-o-pipe")
+    .querySelector(".sec-two-o-to-o-grey-pipe");
   var oToAgreyPipe = document
     .querySelector(".sec-two-o-to-a-pipe")
     .querySelector(".sec-two-o-to-a-grey-pipe");
@@ -116,9 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           setTimeout(() => {
             setWaterWaveTransform({ y1: 1965 });
-            oToOpipe
-              .querySelector(".sec-two-o-to-o-grey-pipe")
-              .classList.add("secTwoCathater1AnimationIn");
+            oToOgreyPipe.classList.add("secTwoCathater1AnimationIn");
             oToAgreyPipe.classList.add("secTwoCathater1AnimationIn");
             oToBgreyPipe.classList.add("secTwoCathater1AnimationIn");
             oToAbGreyPipe.classList.add("secTwoCathater1AnimationIn");
@@ -160,6 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "sec-two-fade-transfusion-content"
           );
           h2OutputElements[2].classList.add("sec-two-fade");
+
           setTimeout(() => {
             setWaterWaveTransform({ y3: 1965 });
             bToBgreyPipe.classList.add("secTwoCathater1AnimationIn");
@@ -228,10 +229,42 @@ document.addEventListener("DOMContentLoaded", function () {
     oToAbPipe.style.zIndex = "4";
     bToAbPipe.style.zIndex = "4";
 
-    oToOpipe
-      .querySelector(".sec-two-o-to-o-grey-pipe")
-      .classList.remove("secTwoCathater1AnimationIn");
+    if (aToAgreyPipe.classList.contains("secTwoCathater1AnimationIn")) {
+      aToAgreyPipe.classList.add("secTwoCathater1AnimationOut");
+    }
+    if (oToOgreyPipe.classList.contains("secTwoCathater1AnimationIn")) {
+      oToOgreyPipe.classList.add("secTwoCathater1AnimationOut");
+    }
 
+    if (oToAgreyPipe.classList.contains("secTwoCathater1AnimationIn")) {
+      oToAgreyPipe.classList.add("secTwoCathater1AnimationOut");
+    }
+
+    if (oToBgreyPipe.classList.contains("secTwoCathater1AnimationIn")) {
+      oToBgreyPipe.classList.add("secTwoCathater1AnimationOut");
+    }
+
+    if (oToAbGreyPipe.classList.contains("secTwoCathater1AnimationIn")) {
+      oToAbGreyPipe.classList.add("secTwoCathater1AnimationOut");
+    }
+
+    if (aToAbGreyPipe.classList.contains("secTwoCathater1AnimationIn")) {
+      aToAbGreyPipe.classList.add("secTwoCathater1AnimationOut");
+    }
+
+    if (bToBgreyPipe.classList.contains("secTwoCathater1AnimationIn")) {
+      bToBgreyPipe.classList.add("secTwoCathater1AnimationOut");
+    }
+
+    if (bToAbGreyPipe.classList.contains("secTwoCathater1AnimationIn")) {
+      bToAbGreyPipe.classList.add("secTwoCathater1AnimationOut");
+    }
+
+    if (abToAbGreyPipe.classList.contains("secTwoCathater1AnimationIn")) {
+      abToAbGreyPipe.classList.add("secTwoCathater1AnimationOut");
+    }
+
+    oToOgreyPipe.classList.remove("secTwoCathater1AnimationIn");
     oToAgreyPipe.classList.remove("secTwoCathater1AnimationIn");
     oToBgreyPipe.classList.remove("secTwoCathater1AnimationIn");
     oToAbGreyPipe.classList.remove("secTwoCathater1AnimationIn");
@@ -251,6 +284,282 @@ document.addEventListener("DOMContentLoaded", function () {
       div.classList.remove("sec-two-fade-recipient-type-content");
     });
   }
-});
 
-// BLOOD TYPE AND TRANSFUSION SCRIPT END
+  // BLOOD TYPE AND TRANSFUSION SCRIPT END
+
+  // RARE BLOOD TYPE STYLE START
+
+  const secThreeButtons = document.querySelectorAll(
+    ".sec-three-button-group button"
+  );
+  const waterTransform = document.querySelectorAll(
+    "#sec-three-water-transform"
+  );
+
+  const bloodTypeData = {
+    "O+": {
+      "caucasian-val": 37,
+      "african-american-val": 47,
+      "asin-val": 39,
+      "latino-american-val": 53,
+      transform: [-300, 1860, 1845, 1855, 1830],
+    },
+    "O-": {
+      "caucasian-val": 8,
+      "african-american-val": 4,
+      "asin-val": 1,
+      "latino-american-val": 4,
+      transform: [-300, 1900, 1905, 1913, 1905],
+    },
+    "A+": {
+      "caucasian-val": 33,
+      "african-american-val": 24,
+      "asin-val": 27,
+      "latino-american-val": 29,
+      transform: [-300, 1860, 1880, 1873, 1868],
+    },
+    "A-": {
+      "caucasian-val": 7,
+      "african-american-val": 2,
+      "asin-val": 0.5,
+      "latino-american-val": 2,
+      transform: [-300, 1902, 1908, 1913, 1908],
+    },
+    "B+": {
+      "caucasian-val": 9,
+      "african-american-val": 18,
+      "asin-val": 25,
+      "latino-american-val": 9,
+      transform: [-300, 1897, 1882, 1875, 1897],
+    },
+    "B-": {
+      "caucasian-val": 2,
+      "african-american-val": 1,
+      "asin-val": 0.4,
+      "latino-american-val": 1,
+      transform: [-300, 1906, 1911, 1914, 1911],
+    },
+    "AB+": {
+      "caucasian-val": 3,
+      "african-american-val": 4,
+      "asin-val": 7,
+      "latino-american-val": 2,
+      transform: [-300, 1903, 1901, 1896, 1906],
+    },
+    "AB-": {
+      "caucasian-val": 1,
+      "african-american-val": 0.3,
+      "asin-val": 0.1,
+      "latino-american-val": 0.2,
+      transform: [-300, 1910, 1913, 1915, 1914],
+    },
+  };
+
+  function secThreeSetDefaultSelections() {
+    var defaultButton = secThreeButtons[0];
+    if (defaultButton) {
+      defaultButton.click();
+    }
+  }
+
+  secThreeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const bloodType = button.textContent;
+
+      secThreeButtons.forEach(function (button) {
+        button.classList.remove("sec-three-selected");
+      });
+
+      button.classList.toggle("sec-three-selected");
+
+      if (bloodTypeData.hasOwnProperty(bloodType)) {
+        const values = bloodTypeData[bloodType];
+        for (const elementId in values) {
+          if (values.hasOwnProperty(elementId) && elementId !== "transform") {
+            updateValue(elementId, values[elementId]);
+          }
+        }
+        setWaterTransform(values.transform);
+      } else {
+        console.log("Invalid blood type");
+      }
+    });
+  });
+  setTimeout(() => {
+    secThreeSetDefaultSelections();
+  }, 200);
+
+  function setWaterTransform(transform) {
+    waterTransform.forEach((element, index) => {
+      element.setAttribute(
+        "transform",
+        `translate(${transform[0]} ${transform[index + 1]})`
+      );
+    });
+  }
+
+  function updateValue(elementId, newValue) {
+    var currentPercentage = parseInt(
+      document.getElementById(elementId).textContent,
+      10
+    );
+    var newPercentage = newValue;
+
+    animateNumber(elementId, currentPercentage, newPercentage);
+  }
+
+  function animateNumber(elementId, start, end) {
+    var duration = 1000; // Animation duration in milliseconds
+    var startTime = null;
+
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+
+      var progress = timestamp - startTime;
+      var percentage = Math.min(progress / duration, 1);
+
+      var animatedValue;
+      if (start + (end - start) * percentage <= 1) {
+        animatedValue = start + (end - start) * percentage;
+      } else {
+        animatedValue = Math.round(start + (end - start) * percentage);
+      }
+
+      document.getElementById(elementId).textContent =
+        animatedValue.toLocaleString(undefined, {
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 1,
+        }) + "%";
+
+      if (percentage < 1) {
+        requestAnimationFrame(step);
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  // RARE BLOOD TYPE STYLE END
+
+  // MY BLOOD TYPE DETERMINED SCRIPT START
+
+  var secFourButtons1 = document.querySelectorAll(
+    ".sec-four-button-group-1 .sec-four-button"
+  );
+  var secFourButtons2 = document.querySelectorAll(
+    ".sec-four-button-group-2 .sec-four-button"
+  );
+  var outputText = document.querySelector(".child-content");
+  var parentOneImageMaskVal = document.getElementById("parent1ImageMaskVal");
+  var parentTwoImageMaskVal = document.getElementById("parent2ImageMaskVal");
+
+  var selections = {
+    side1: "",
+    side2: "",
+  };
+
+  function setDefaultSelections() {
+    if (secFourButtons1) {
+      secFourButtons1[1].click();
+    }
+    if (secFourButtons2) {
+      secFourButtons2[2].click();
+    }
+  }
+
+  secFourButtons1.forEach(function (button) {
+    button.addEventListener("click", function (event) {
+      var buttonText = event.target.textContent;
+
+      handleButtonClick(buttonText, button, 1);
+      parentOneImageMaskVal.textContent = buttonText;
+      updateOutputText();
+    });
+  });
+
+  secFourButtons2.forEach(function (button) {
+    button.addEventListener("click", function (event) {
+      var buttonText = event.target.textContent;
+
+      handleButtonClick(buttonText, button, 2);
+      parentTwoImageMaskVal.textContent = buttonText;
+
+      updateOutputText();
+    });
+  });
+
+  setDefaultSelections();
+
+  function updateOutputText() {
+    if (selections.side1 && selections.side2) {
+      var newOutput = combineSelections(selections);
+      outputText.innerHTML = "<p>" + newOutput + "</p>";
+    }
+  }
+
+  function combineSelections(selections) {
+    var side1 = selections.side1;
+    var side2 = selections.side2;
+
+    if (side1 === "O" && side2 === "O") {
+      return "O";
+    } else if (
+      (side1 === "O" && side2 === "A") ||
+      (side1 === "A" && side2 === "O")
+    ) {
+      return "O or A";
+    } else if (
+      (side1 === "O" && side2 === "B") ||
+      (side1 === "B" && side2 === "O")
+    ) {
+      return "O or B";
+    } else if (
+      (side1 === "O" && side2 === "AB") ||
+      (side1 === "AB" && side2 == "O")
+    ) {
+      return "A or B";
+    } else if (side1 === "A" && side2 === "A") {
+      return "O or A";
+    } else if (
+      (side1 === "A" && side2 === "B") ||
+      (side1 === "B" && side2 == "A")
+    ) {
+      return "O, A, B or AB";
+    } else if (
+      (side1 === "A" && side2 === "AB") ||
+      (side1 === "AB" && side2 == "A")
+    ) {
+      return "A, B or AB";
+    } else if (side1 === "B" && side2 === "B") {
+      return "O or B";
+    } else if (
+      (side1 === "B" && side2 === "AB") ||
+      (side1 === "AB" && side2 == "B")
+    ) {
+      return "A, B or AB";
+    } else if (side1 === "AB" && side2 === "AB") {
+      return "A, B or AB";
+    } else {
+      return "Other combination";
+    }
+  }
+
+  function handleButtonClick(buttonText, clickedButton, groupNumber) {
+    if (groupNumber === 1) {
+      secFourButtons1.forEach(function (button) {
+        button.classList.remove("sec-four-selected");
+      });
+
+      selections.side1 = buttonText;
+    } else if (groupNumber === 2) {
+      selections.side2 = buttonText;
+      secFourButtons2.forEach(function (button) {
+        button.classList.remove("sec-four-selected");
+      });
+    }
+
+    clickedButton.classList.toggle("sec-four-selected");
+  }
+
+  // MY BLOOD TYPE DETERMINED SCRIPT END
+});
