@@ -3,28 +3,220 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blood Types and Transfusion</title>
+    <title>Blood Type Explained A, B, AB and O</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
   </head>
   <body>
-    <div class="panel-wrapper">
-      <div class="panel-main">
-        <h2 class="panel-heading">
+    <!-- HOW BLOOD TYPE IS DETERMINED SECTION START  -->
+
+    <section class="sec-one-panel-wrapper">
+      <div class="sec-one-panel-main">
+        <h2 class="sec-one-panel-heading">
           Click on a blood type below to learn more.
         </h2>
-        <div class="panel-body">
-          <div class="content-wrapper">
-            <h2 class="donor">DONOR</h2>
-            <h2 class="recipient">RECIPIENT</h2>
+        <div class="sec-one-panel-body">
+          <div class="sec-one-button-group">
+            <button id="secOneGroupA" class="sec-one-button-selected">
+              Group A
+            </button>
+            <button id="secOneGroupB">Group B</button>
+            <button id="secOneGroupAB">Group AB</button>
+            <button id="secOneGroupO">Group O</button>
           </div>
-          <div id="o" class="image-and-ricipient-content-wrapper">
-            <div class="image-wrapper">
-              <div class="transfusion-shell"></div>
-              <div class="transfusion-bg">
-                <div class="transfusion-bg-color">
+          <div class="sec-one-image-wrapper">
+            <div class="sec-one-image">
+              <img src="bloodVialHighlight.svg" alt="Blood Vial Highlight" />
+
+              <div class="sec-one-bg-image">
+                <div class="sec-one-inside-image-main">
+                  <div class="sec-one-plasma-wrapper">
+                    <svg
+                      id="sec-one-yellow-blood"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 211 211"
+                      width="300"
+                      height="300"
+                    >
+                      <g style="height: 250px" transform="translate(-312 1822)">
+                        <g id="sec-one-yellow-water" style="height: 250px">
+                          <path
+                            width="400"
+                            height="400"
+                            id="sec-one-yellow-waveShape"
+                            d="M500,118.244v223.11H4V106.464c43.35,1.17,46.02,11.89,94.4,11.89,51.2,0,51.2-12,102.39-12s51.2,12,102.4,12,51.2-12,102.41-12C453.98,106.354,456.65,117.074,500,118.244Z"
+                            transform="translate(308 -1830.354)"
+                            fill="#feda25"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="sec-one-red-cells-wrapper">
+                    <svg
+                      id="sec-one-red-blood"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 211 211"
+                      width="300"
+                      height="300"
+                    >
+                      <g style="height: 250px" transform="translate(-312 1822)">
+                        <g id="sec-one-red-water" style="height: 250px">
+                          <path
+                            width="400"
+                            height="400"
+                            id="sec-one-red-waveShape"
+                            d="M500,118.244v223.11H4V106.464c43.35,1.17,46.02,11.89,94.4,11.89,51.2,0,51.2-12,102.39-12s51.2,12,102.4,12,51.2-12,102.41-12C453.98,106.354,456.65,117.074,500,118.244Z"
+                            transform="translate(308 -1830.354)"
+                            fill="#ff0000"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="sec-one-blood-bubbles">
+                    <svg class="sec-one-bloodBubbles" height="110" width="80">
+                      <circle
+                        class="bloodBubble"
+                        cx="4"
+                        cy="5.074412910706214"
+                        r="4"
+                        starty="4"
+                        wavepos="0"
+                        fill="#bf0000"
+                        wavePos="56"
+                      ></circle>
+                      <circle
+                        class="bloodBubble"
+                        cx="40"
+                        cy="31.23267191580104"
+                        r="4"
+                        starty="25"
+                        wavepos="0"
+                        fill="#bf0000"
+                        wavePos="25"
+                      ></circle>
+                      <circle
+                        class="bloodBubble"
+                        cx="46"
+                        cy="72.38225812614536"
+                        r="4"
+                        starty="69"
+                        wavepos="0"
+                        fill="#bf0000"
+                        wavePos="40"
+                      ></circle>
+                      <circle
+                        class="bloodBubble"
+                        cx="70"
+                        cy="55.402589560734846"
+                        r="4"
+                        starty="45"
+                        wavepos="0"
+                        fill="#bf0000"
+                        wavePos="3"
+                      ></circle>
+                      <circle
+                        class="bloodBubble"
+                        cx="15"
+                        cy="48.23528738298994"
+                        r="4"
+                        starty="38"
+                        wavepos="0"
+                        fill="#bf0000"
+                        wavePos="4"
+                      ></circle>
+                      <circle
+                        class="bloodBubble"
+                        cx="65"
+                        cy="208"
+                        r="4"
+                        starty="8"
+                        wavepos="0"
+                        fill="#bf0000"
+                        wavePos="1"
+                      ></circle>
+                      <circle
+                        class="bloodBubble"
+                        cx="22"
+                        cy="84.83234773179827"
+                        r="4"
+                        starty="78"
+                        wavepos="0"
+                        fill="#bf0000"
+                        wavePos="22"
+                      ></circle>
+                    </svg>
+                  </div>
+                  <div class="sec-one-ballB">B</div>
+                  <div class="sec-one-ballA">A</div>
+                </div>
+              </div>
+
+              <div class="sec-one-blood-vial-upper-content">
+                <h2>PLASMA</h2>
+              </div>
+              <div class="sec-one-blood-vial-bottom-content">
+                <h2>RED CELLS</h2>
+              </div>
+            </div>
+          </div>
+          <div class="sec-one-content">
+            <div id="secOneGroupA" class="sec-one-fade-in">
+              <h1>Group A</h1>
+              <p>
+                has only the A antigen on red cells (and B antibody in the
+                plasma)
+              </p>
+            </div>
+            <div id="secOneGroupB">
+              <h1>Group B</h1>
+              <p>
+                has only the B antigen on red cells (and A antibody in the
+                plasma)
+              </p>
+            </div>
+            <div id="secOneGroupAB">
+              <h1>Group AB</h1>
+              <p>
+                has both A and B antigens on red cells (but neither A nor B
+                antibody in the plasma)
+              </p>
+            </div>
+            <div id="secOneGroupO">
+              <h1>Group O</h1>
+              <p>
+                has neither A nor B antigens on red cells (but both A and B
+                antibody are in the plasma)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW BLOOD TYPE IS DETERMINED SECTION END   -->
+    <!-- BLOOD TYPE AND TRANSFUSION SECTION START  -->
+
+    <section class="sec-two-panel-wrapper">
+      <div class="sec-two-panel-main">
+        <h2 class="sec-two-panel-heading">
+          Click on a blood type below to learn more.
+        </h2>
+        <div class="sec-two-panel-body">
+          <div class="sec-two-content-wrapper">
+            <h2 class="sec-two-donor">DONOR</h2>
+            <h2 class="sec-two-recipient">RECIPIENT</h2>
+          </div>
+          <div id="secTwoO" class="sec-two-image-and-ricipient-content-wrapper">
+            <div class="sec-two-image-wrapper">
+              <div class="sec-two-transfusion-shell"></div>
+              <div class="sec-two-transfusion-bg">
+                <div class="sec-two-transfusion-bg-color">
                   <svg
-                    id="svg-o"
+                    id="sec-two-svg-o"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
                     viewBox="0 0 211 211"
@@ -40,12 +232,15 @@
                         d="M0.107,0.693 L0.345,0.914,0.454,0.916 V1 H0.579 V0.915 L0.714,0.91,0.914,0.702 S1,0.051,1,0.013 C0.977,0,0.669,0.006,0.669,0.006 S0.646,0.061,0.51,0.059 S0.343,0.021,0.343,0.021 S0.034,0.015,0.006,0.029 C0,0.066,0.107,0.693,0.107,0.693"
                       ></path>
                     </clipPath>
-                    <g style="height: 250px" transform="translate(-312 1822)">
-                      <g id="water" style="height: 250px">
+                    <g
+                      id="sec-two-water-wave-transform"
+                      transform="translate(-312 1822)"
+                    >
+                      <g id="sec-two-water" style="height: 250px">
                         <path
                           width="400"
                           height="400"
-                          id="waveShape"
+                          id="secTwoWaveShape"
                           d="M500,118.244v223.11H4V106.464c43.35,1.17,46.02,11.89,94.4,11.89,51.2,0,51.2-12,102.39-12s51.2,12,102.4,12,51.2-12,102.41-12C453.98,106.354,456.65,117.074,500,118.244Z"
                           transform="translate(308 -1830.354)"
                           fill="#ff0000"
@@ -55,16 +250,16 @@
                   </svg>
                 </div>
               </div>
-              <h1 class="transfusion-content">O</h1>
+              <h1 class="sec-two-transfusion-content">O</h1>
             </div>
 
-            <div class="recipient-type-content">O</div>
+            <div class="sec-two-recipient-type-content">O</div>
           </div>
-          <div id="a" class="image-and-ricipient-content-wrapper">
-            <div class="image-wrapper">
-              <div class="transfusion-shell"></div>
-              <div class="transfusion-bg">
-                <div class="transfusion-bg-color">
+          <div id="secTwoA" class="sec-two-image-and-ricipient-content-wrapper">
+            <div class="sec-two-image-wrapper">
+              <div class="sec-two-transfusion-shell"></div>
+              <div class="sec-two-transfusion-bg">
+                <div class="sec-two-transfusion-bg-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -81,12 +276,15 @@
                         d="M0.107,0.693 L0.345,0.914,0.454,0.916 V1 H0.579 V0.915 L0.714,0.91,0.914,0.702 S1,0.051,1,0.013 C0.977,0,0.669,0.006,0.669,0.006 S0.646,0.061,0.51,0.059 S0.343,0.021,0.343,0.021 S0.034,0.015,0.006,0.029 C0,0.066,0.107,0.693,0.107,0.693"
                       ></path>
                     </clipPath>
-                    <g style="height: 250px" transform="translate(-312 1822)">
-                      <g id="water" style="height: 250px">
+                    <g
+                      id="sec-two-water-wave-transform"
+                      transform="translate(-312 1822)"
+                    >
+                      <g id="sec-two-water" style="height: 250px">
                         <path
                           width="400"
                           height="400"
-                          id="waveShape"
+                          id="secTwoWaveShape"
                           d="M500,118.244v223.11H4V106.464c43.35,1.17,46.02,11.89,94.4,11.89,51.2,0,51.2-12,102.39-12s51.2,12,102.4,12,51.2-12,102.41-12C453.98,106.354,456.65,117.074,500,118.244Z"
                           transform="translate(308 -1830.354)"
                           fill="#ff0000"
@@ -96,15 +294,15 @@
                   </svg>
                 </div>
               </div>
-              <h1 class="transfusion-content">A</h1>
+              <h1 class="sec-two-transfusion-content">A</h1>
             </div>
-            <div class="recipient-type-content">A</div>
+            <div class="sec-two-recipient-type-content">A</div>
           </div>
-          <div id="b" class="image-and-ricipient-content-wrapper">
-            <div class="image-wrapper">
-              <div class="transfusion-shell"></div>
-              <div class="transfusion-bg">
-                <div class="transfusion-bg-color">
+          <div id="secTwoB" class="sec-two-image-and-ricipient-content-wrapper">
+            <div class="sec-two-image-wrapper">
+              <div class="sec-two-transfusion-shell"></div>
+              <div class="sec-two-transfusion-bg">
+                <div class="sec-two-transfusion-bg-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -121,12 +319,15 @@
                         d="M0.107,0.693 L0.345,0.914,0.454,0.916 V1 H0.579 V0.915 L0.714,0.91,0.914,0.702 S1,0.051,1,0.013 C0.977,0,0.669,0.006,0.669,0.006 S0.646,0.061,0.51,0.059 S0.343,0.021,0.343,0.021 S0.034,0.015,0.006,0.029 C0,0.066,0.107,0.693,0.107,0.693"
                       ></path>
                     </clipPath>
-                    <g style="height: 250px" transform="translate(-312 1822)">
-                      <g id="water" style="height: 250px">
+                    <g
+                      id="sec-two-water-wave-transform"
+                      transform="translate(-312 1822)"
+                    >
+                      <g id="sec-two-water" style="height: 250px">
                         <path
                           width="400"
                           height="400"
-                          id="waveShape"
+                          id="secTwoWaveShape"
                           d="M500,118.244v223.11H4V106.464c43.35,1.17,46.02,11.89,94.4,11.89,51.2,0,51.2-12,102.39-12s51.2,12,102.4,12,51.2-12,102.41-12C453.98,106.354,456.65,117.074,500,118.244Z"
                           transform="translate(308 -1830.354)"
                           fill="#ff0000"
@@ -136,15 +337,18 @@
                   </svg>
                 </div>
               </div>
-              <h1 class="transfusion-content">B</h1>
+              <h1 class="sec-two-transfusion-content">B</h1>
             </div>
-            <div class="recipient-type-content">B</div>
+            <div class="sec-two-recipient-type-content">B</div>
           </div>
-          <div id="ab" class="image-and-ricipient-content-wrapper">
-            <div class="image-wrapper">
-              <div class="transfusion-shell"></div>
-              <div class="transfusion-bg">
-                <div class="transfusion-bg-color">
+          <div
+            id="secTwoAb"
+            class="sec-two-image-and-ricipient-content-wrapper"
+          >
+            <div class="sec-two-image-wrapper">
+              <div class="sec-two-transfusion-shell"></div>
+              <div class="sec-two-transfusion-bg">
+                <div class="sec-two-transfusion-bg-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -161,12 +365,15 @@
                         d="M0.107,0.693 L0.345,0.914,0.454,0.916 V1 H0.579 V0.915 L0.714,0.91,0.914,0.702 S1,0.051,1,0.013 C0.977,0,0.669,0.006,0.669,0.006 S0.646,0.061,0.51,0.059 S0.343,0.021,0.343,0.021 S0.034,0.015,0.006,0.029 C0,0.066,0.107,0.693,0.107,0.693"
                       ></path>
                     </clipPath>
-                    <g style="height: 250px" transform="translate(-312 1822)">
-                      <g id="water" style="height: 250px">
+                    <g
+                      id="sec-two-water-wave-transform"
+                      transform="translate(-312 1822)"
+                    >
+                      <g id="sec-two-water" style="height: 250px">
                         <path
                           width="400"
                           height="400"
-                          id="waveShape"
+                          id="secTwoWaveShape"
                           d="M500,118.244v223.11H4V106.464c43.35,1.17,46.02,11.89,94.4,11.89,51.2,0,51.2-12,102.39-12s51.2,12,102.4,12,51.2-12,102.41-12C453.98,106.354,456.65,117.074,500,118.244Z"
                           transform="translate(308 -1830.354)"
                           fill="#ff0000"
@@ -176,12 +383,12 @@
                   </svg>
                 </div>
               </div>
-              <h1 class="transfusion-content">AB</h1>
+              <h1 class="sec-two-transfusion-content">AB</h1>
             </div>
-            <div class="recipient-type-content">AB</div>
+            <div class="sec-two-recipient-type-content">AB</div>
           </div>
-          <div class="pipe-wrapper">
-            <div class="o-to-o-pipe">
+          <div class="sec-two-pipe-wrapper">
+            <div class="sec-two-o-to-o-pipe">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 172">
                 <line
                   x1="0.5"
@@ -194,7 +401,7 @@
                 ></line>
               </svg>
               <svg
-                class="o-to-o-grey-pipe"
+                class="sec-two-o-to-o-grey-pipe"
                 data-name="Layer 1"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 4 172"
@@ -211,9 +418,9 @@
                 ></line>
               </svg>
             </div>
-            <div class="o-to-a-pipe">
+            <div class="sec-two-o-to-a-pipe">
               <svg
-                class="o-to-a-grey-pipe"
+                class="sec-two-o-to-a-grey-pipe"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 193.59 169.64"
               >
@@ -240,9 +447,9 @@
                 ></path>
               </svg>
             </div>
-            <div class="o-to-b-pipe">
+            <div class="sec-two-o-to-b-pipe">
               <svg
-                class="o-to-b-grey-pipe"
+                class="sec-two-o-to-b-grey-pipe"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 387.86 167.61"
               >
@@ -269,9 +476,9 @@
                 ></path>
               </svg>
             </div>
-            <div class="o-to-ab-pipe">
+            <div class="sec-two-o-to-ab-pipe">
               <svg
-                class="o-to-ab-grey-pipe"
+                class="sec-two-o-to-ab-grey-pipe"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 581.96 169.17"
               >
@@ -296,9 +503,9 @@
                 ></path>
               </svg>
             </div>
-            <div style="z-index: 10" class="a-to-a-pipe">
+            <div style="z-index: 10" class="sec-two-a-to-a-pipe">
               <svg
-                class="a-to-a-grey-pipe"
+                class="sec-two-a-to-a-grey-pipe"
                 data-name="Layer 1"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 3 172"
@@ -326,9 +533,9 @@
                 ></line>
               </svg>
             </div>
-            <div class="a-to-ab-pipe">
+            <div class="sec-two-a-to-ab-pipe">
               <svg
-                class="a-to-ab-grey-pipe"
+                class="sec-two-a-to-ab-grey-pipe"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 387.86 167.65"
               >
@@ -356,9 +563,9 @@
               </svg>
             </div>
 
-            <div class="b-to-b-pipe">
+            <div class="sec-two-b-to-b-pipe">
               <svg
-                class="b-to-b-grey-pipe"
+                class="sec-two-b-to-b-grey-pipe"
                 data-name="Layer 1"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 4 172"
@@ -386,9 +593,9 @@
                 ></line>
               </svg>
             </div>
-            <div class="b-to-ab-pipe">
+            <div class="sec-two-b-to-ab-pipe">
               <svg
-                class="b-to-ab-grey-pipe"
+                class="sec-two-b-to-ab-grey-pipe"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 1 194.48 167.64"
               >
@@ -417,9 +624,9 @@
               </svg>
             </div>
 
-            <div class="ab-to-ab-pipe">
+            <div class="sec-two-ab-to-ab-pipe">
               <svg
-                class="ab-to-ab-grey-pipe"
+                class="sec-two-ab-to-ab-grey-pipe"
                 data-name="Layer 1"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 4 172"
@@ -450,7 +657,7 @@
           </div>
         </div>
 
-        <div id="output-content">
+        <div id="sec-two-output-content">
           <h2>
             Group O can donate red blood cells to anybody. It’s the universal
             donor.Group AB can donor.
@@ -462,6 +669,14 @@
           </h2>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- BLOOD TYPE AND TRANSFUSION SECTION END  -->
+
+    <!-- RARE BLOOD TYPE SECTION START  -->
+    <!-- RARE BLOOD TYPE SECTION END  -->
+    <!-- MY BLOOD TYPE DETERMINED SECTION START  -->
+
+    <!-- MY BLOOD TYPE DETERMINED SECTION END  -->
   </body>
 </html>

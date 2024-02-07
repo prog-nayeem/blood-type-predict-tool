@@ -29,6 +29,10 @@ body {
   margin-top: 1.5rem;
 }
 
+.panel-body {
+  margin-top: 80px;
+}
+
 .button-group {
   margin-top: 2rem;
   display: flex;
@@ -66,6 +70,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 60px;
 }
 
 .image-wrapper {
@@ -79,73 +84,70 @@ body {
 
 .image-wrapper img {
   height: 190px;
+  width: 150px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  z-index: 22;
+}
+
+.bg-color {
+  position: absolute;
+  height: 190px;
+  width: 150px;
+  z-index: 5;
   background-color: rgb(255, 203, 203);
+}
+
+.bg-water-wave {
+  position: absolute;
+  height: 190px;
+  width: 150px;
+  z-index: 6;
+  overflow: hidden;
 }
 
 .image-wrapper h2 {
   color: #666666;
   font-size: 19px;
   font-weight: 600;
-  margin-top: 10px;
+  margin-top: 30px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.image-wrapper div {
+.image-wrapper .content {
   position: absolute;
-  top: 41%;
+  top: 30%;
   left: 21%;
   z-index: 22;
   width: 100px;
 }
 
-.image-wrapper div h2 {
+.image-wrapper .content h2 {
   font-size: 32px;
   font-weight: 700;
   color: #000000;
 }
-
-.background-color {
-  background-color: #e20000;
-  position: absolute;
-  top: 50%;
-  width: 100%;
+#water-transform {
+  transition: transform 2s ease;
+}
+#water #waveShape {
+  animation-name: waveAction01;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 10s;
 }
 
-.wave-container {
-  width: 100%;
-  overflow: hidden;
-  animation: containerAnimation 10s linear infinite;
-}
-
-.wave-path {
-  animation: waveAnimation 10s linear infinite;
-}
-
-@keyframes containerAnimation {
+@keyframes waveAction01 {
   0% {
-    transform: translateY(0);
+    transform: translate(300px, -1850px);
   }
   50% {
-    transform: translateY(-50px); /* Adjust the amplitude as needed */
+    transform: translate(102px, -1857px);
   }
   100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes waveAnimation {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-50px); /* Adjust the amplitude as needed */
-  }
-  100% {
-    transform: translateY(0);
+    transform: translate(300px, -1850px);
   }
 }

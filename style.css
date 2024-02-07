@@ -1,0 +1,667 @@
+body {
+  font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* HOW BLOOD TYPE IS DETERMINED STYLE START   */
+
+.sec-one-panel-wrapper {
+  width: 905px;
+  margin: auto auto;
+}
+
+.sec-one-panel-wrapper .sec-one-panel-main {
+  width: 100%;
+  box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.12);
+  border: solid 0.1rem #d0d1d2;
+  background-color: #fff;
+  font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  min-height: 14.1rem;
+  margin: 1rem 0;
+  height: auto !important;
+}
+
+.sec-one-panel-heading {
+  padding: 0px;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 16px;
+  color: rgb(102, 102, 102);
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+.sec-one-panel-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 75px;
+}
+
+.sec-one-button-group button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  z-index: 1;
+  width: 187px;
+  height: 43px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fffdfd;
+  color: #808080;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  font-family: sans-serif;
+  margin-bottom: 25px;
+}
+
+.sec-one-button-group > .sec-one-button-selected {
+  background-color: #e20000;
+  color: white;
+}
+
+.sec-one-image-wrapper {
+  width: 350px;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sec-one-image {
+  background-image: url(bloodVialShell.svg);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: 100% 100%;
+  z-index: 5;
+  width: 145.88px;
+  height: 445.83px;
+  position: relative;
+}
+
+.sec-one-image > img {
+  background-repeat: no-repeat;
+  overflow: visible;
+  background-size: 100% 100%;
+  width: 105.23px;
+  height: 418.81px;
+  position: absolute;
+  top: 18px;
+  left: 23px;
+  z-index: 4;
+}
+
+.sec-one-image .sec-one-bg-image {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 2;
+  display: inline;
+  width: 107.81px;
+  height: 408.1px;
+  top: 20px;
+  left: 19px;
+  background-image: url(bloodVialBackground.svg);
+}
+
+.sec-one-bg-image > .sec-one-inside-image-main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px 0px 47px 53px;
+  /* background: #000; */
+}
+
+.sec-one-plasma-wrapper {
+  position: absolute;
+  top: 45px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.sec-one-red-cells-wrapper {
+  position: absolute;
+  top: 180px;
+  height: 240px;
+  overflow: hidden;
+}
+
+.sec-one-blood-bubbles {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  animation: bloodBubblesAnimation 7s ease-in-out infinite;
+}
+
+@keyframes bloodBubblesAnimation {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+#sec-one-yellow-water #sec-one-yellow-waveShape,
+#sec-one-red-water #sec-one-red-waveShape {
+  animation-name: secOneWaveAction;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 10s;
+}
+
+@keyframes secOneWaveAction {
+  0% {
+    transform: translate(300px, -1910px);
+  }
+  50% {
+    transform: translate(102px, -1912px);
+  }
+  100% {
+    transform: translate(300px, -1910px);
+  }
+}
+
+.sec-one-blood-vial-upper-content {
+  position: absolute;
+  border-style: none;
+  overflow: visible;
+  z-index: 8;
+  top: 173px;
+  left: 39px;
+}
+
+.sec-one-ballB {
+  opacity: 1;
+  width: 35px;
+  height: 35px;
+  transform-origin: 50% 50%;
+  transform: scaleX(1.07009) scaleY(1.07009);
+  background-color: rgb(255, 255, 255);
+  border-width: 0px;
+  border-radius: 50%;
+  border-color: rgb(216, 221, 228);
+  overflow: visible;
+  z-index: 50;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  animation: secOneBallsAnimation 6s ease-in-out infinite;
+  position: absolute;
+  top: 124px;
+  left: 25px;
+  transition: 1s ease;
+}
+
+@keyframes secOneBallsAnimation {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+.sec-one-blood-vial-upper-content h2 {
+  color: rgb(0, 0, 0);
+  padding: 8px;
+  border-style: none;
+  font-size: 13px;
+  border-width: 0px;
+  font-weight: 600;
+  text-shadow: rgb(255, 226, 82) 0px 0px 2px;
+}
+
+.sec-one-blood-vial-bottom-content {
+  position: absolute;
+  overflow: visible;
+  z-index: 8;
+  top: 307px;
+  left: 40px;
+}
+
+.sec-one-ballA {
+  opacity: 1;
+  width: 35px;
+  height: 35px;
+  transform-origin: 50% 50%;
+  transform: scaleX(1.04053) scaleY(1.04053);
+  background-color: rgb(0, 0, 0);
+  border-width: 0px;
+  border-radius: 50%;
+  border-color: rgb(216, 221, 228);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+  animation: secOneBallsAnimation 6s ease-in-out infinite;
+  position: absolute;
+  top: 243px;
+  left: 49px;
+  transition: 1s ease;
+  z-index: 222;
+}
+
+.sec-one-blood-vial-bottom-content h2 {
+  color: rgb(255, 255, 255);
+  display: inline;
+  font-size: 13px;
+  font-weight: 600;
+  text-shadow: rgb(255, 0, 0) 0px 0px 2px;
+}
+
+.sec-one-content {
+  width: 280px;
+}
+
+.sec-one-content > div {
+  opacity: 0;
+  display: none;
+}
+
+.sec-one-content div h1 {
+  color: rgb(33, 33, 33);
+  padding: 0px;
+  opacity: 1;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.sec-one-content div p {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 30px;
+}
+
+.sec-one-fade-in {
+  display: block !important;
+  opacity: 1;
+  animation-name: secOneFadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes secOneFadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* HOW BLOOD TYPE IS DETERMINED STYLE END   */
+
+/* BLOOD TYPE AND TRANSFUSION STYLE START */
+
+.sec-two-panel-wrapper {
+  width: 905px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.sec-two-panel-wrapper .sec-two-panel-main {
+  width: 100%;
+  box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.12);
+  border: solid 0.1rem #d0d1d2;
+  background-color: #f4f4f4;
+  font-family: "Roboto", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  min-height: 14.1rem;
+  margin: 1rem 0;
+  height: auto !important;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.sec-two-panel-heading {
+  padding: 0px;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 16px;
+  color: rgb(102, 102, 102);
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+.sec-two-panel-body {
+  margin-top: 40px;
+  display: flex;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.sec-two-content-wrapper {
+  padding-top: 66px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sec-two-content-wrapper .sec-two-donor,
+.sec-two-content-wrapper .sec-two-recipient {
+  color: rgb(105, 105, 105);
+  padding: 8px;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  z-index: 47;
+}
+
+.sec-two-image-wrapper {
+  background-image: url(transfusionMask.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 178px;
+  height: 201px;
+  position: relative;
+  margin-right: 16px;
+}
+
+.sec-two-transfusion-shell {
+  position: absolute;
+  background-image: url(transfusionShell.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 112px;
+  height: 142px;
+  top: 27px;
+  left: 32px;
+  cursor: pointer;
+}
+
+.sec-two-transfusion-bg {
+  position: absolute;
+  background-image: url(transfusionBG.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 3;
+  transform-origin: 50% 50%;
+  width: 96px;
+  height: 128px;
+  top: 38px;
+  cursor: pointer;
+  left: 41px;
+}
+.sec-two-transfusion-bg-color {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 222;
+  overflow: hidden;
+}
+
+.sec-two-transfusion-bg-color > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.sec-two-transfusion-content {
+  position: absolute;
+  overflow: visible;
+  z-index: 52;
+  width: 19px;
+  height: 27px;
+  top: 82px;
+  font-size: 20px;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: color 1s;
+}
+
+.sec-two-fade-transfusion-content {
+  color: #414040;
+}
+
+.sec-two-recipient-type-content {
+  margin-top: 132px;
+  margin-left: 53px;
+  width: 77px;
+  height: 77px;
+  background-color: #fffdfd;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #414040;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+  z-index: 222;
+  position: relative;
+}
+
+.sec-two-fade-recipient-type-content {
+  background-color: #ed1e24;
+  color: white;
+  transition: background-color 4s ease;
+}
+
+.sec-two-pipe-wrapper {
+  position: absolute;
+  overflow: hidden;
+  z-index: 7;
+  width: 585px;
+  height: 170px;
+  top: 166px;
+  left: 207px;
+}
+
+.secTwoCathater1AnimationOut {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  animation: secTwoDash2 0.25s ease-in;
+}
+
+.secTwoCathater1AnimationIn {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: secTwoDash1 1.25s linear -0.75s;
+}
+
+.sec-two-o-to-o-grey-pipe,
+.sec-two-o-to-a-grey-pipe,
+.sec-two-o-to-b-grey-pipe,
+.sec-two-o-to-ab-grey-pipe,
+.sec-two-a-to-a-grey-pipe,
+.sec-two-a-to-ab-grey-pipe,
+.sec-two-b-to-b-grey-pipe,
+.sec-two-b-to-ab-grey-pipe,
+.sec-two-ab-to-ab-grey-pipe {
+  position: absolute;
+  left: 0px;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes secTwoDash1 {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: 1000;
+  }
+}
+
+@keyframes secTwoDash2 {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.sec-two-o-to-o-pipe {
+  pointer-events: auto;
+  position: absolute;
+  overflow: visible;
+  z-index: 15;
+  width: 4px;
+  height: 172px;
+  top: 0px;
+  left: 0px;
+}
+
+.sec-two-o-to-a-pipe {
+  color: black;
+  position: absolute;
+  padding: 0px;
+  font-size: 16px;
+  z-index: 2;
+  width: 194px;
+  height: 170px;
+}
+
+.sec-two-o-to-b-pipe {
+  position: absolute;
+  overflow: visible;
+  width: 388px;
+  height: 168px;
+  top: 1px;
+  left: 0px;
+  color: #000;
+}
+
+.sec-two-o-to-ab-pipe {
+  position: absolute;
+  color: rgb(0, 0, 0);
+  padding: 0px;
+  overflow: visible;
+  z-index: 2;
+  width: 582px;
+  height: 169px;
+  top: 0px;
+  left: 0px;
+}
+
+.sec-two-a-to-a-pipe {
+  position: absolute;
+  overflow: visible;
+  z-index: 19;
+  width: 3px;
+  height: 172px;
+  top: 0px;
+  left: 194px;
+  color: #000;
+  padding: 0px;
+}
+
+.sec-two-a-to-ab-pipe {
+  position: absolute;
+  overflow: visible;
+  z-index: 13;
+  width: 388px;
+  height: 168px;
+  top: 1px;
+  left: 194px;
+  color: #000;
+}
+
+.sec-two-b-to-b-pipe {
+  position: absolute;
+  z-index: 20;
+  width: 4px;
+  height: 172px;
+  top: 0px;
+  left: 387px;
+  color: #000;
+}
+.sec-two-b-to-ab-pipe {
+  position: absolute;
+  overflow: visible;
+  z-index: 14;
+  width: 195px;
+  height: 168px;
+  top: 3px;
+  left: 387px;
+  color: black;
+}
+.sec-two-ab-to-ab-pipe {
+  position: absolute;
+  overflow: visible;
+  z-index: 21;
+  width: 4px;
+  height: 172px;
+  top: 0px;
+  left: 581px;
+  color: #000;
+}
+
+#sec-two-output-content {
+  width: 100%;
+  position: relative;
+  height: 100px;
+}
+
+.sec-two-fade {
+  opacity: 1 !important;
+  transition: opacity 4s;
+}
+
+#sec-two-output-content h2 {
+  position: absolute;
+  left: 242px;
+  width: 554px;
+  height: 22px;
+  color: rgb(77, 77, 77);
+  padding: 0px;
+  font-size: 16px;
+  font-weight: 600;
+  overflow: visible;
+  text-align: center;
+  opacity: 0;
+}
+
+#sec-two-water-wave-transform {
+  transition: transform 1s ease;
+}
+
+#sec-two-water #secTwoWaveShape {
+  animation-name: sectionTwoWaveAnimation;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 10s;
+}
+
+@keyframes sectionTwoWaveAnimation {
+  0% {
+    transform: translate(300px, -1910px);
+  }
+  50% {
+    transform: translate(102px, -1900px);
+  }
+  100% {
+    transform: translate(300px, -1910px);
+  }
+}
+
+/* BLOOD TYPE AND TRANSFUSION STYLE END */
